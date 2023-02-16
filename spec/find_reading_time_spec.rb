@@ -4,7 +4,7 @@ RSpec.describe "find_reading_time method" do
   context "when given a text of 200 words" do
     it "returns 1" do
       result = find_reading_time("word " * 200)
-      expect(result).to eq "Reading time is less than 1 minute"
+      expect(result).to eq 1
     end
   end
 
