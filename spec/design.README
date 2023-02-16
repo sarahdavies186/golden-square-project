@@ -1,0 +1,38 @@
+# {{PROBLEM}} Method Design Recipe
+
+## 1. Describe the Problem
+
+As a user
+So that I can manage my time
+I want to see an estimate of reading time for a text, assuming that I can read 200 words a minute.
+
+## 2. Design the Method Signature
+
+_Include the name of the method, its parameters, return value, and side effects._
+
+```ruby
+# reading_time = find_reading_time(text) 
+
+# text is how many words
+# reading_time is a number - amount of words divided by 200 words/per minute 
+
+```
+
+## 3. Create Examples as Tests
+
+_Make a list of examples of what the method will take and return._
+
+```ruby
+find_reading_time("word" * 200) => 1
+find_reading_time("word" * 400) => 2
+find_reading_time("word" * 100) => 1
+find_reading_time("word" * 1000) => 5
+find_reading_time("word" * 10000) => 50
+find_reading_time(200) => 2
+
+```
+
+## 4. Implement the Behaviour
+
+_After each test you write, follow the test-driving process of red, green, refactor to implement the behaviour._
+

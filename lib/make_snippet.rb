@@ -7,5 +7,3 @@ def make_snippet(str)
     return("#{str.split[0..4].join(" ")...}")
   end
 end
-
-print make_snippet("There are lots of words in my string")
