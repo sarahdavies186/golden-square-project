@@ -66,7 +66,7 @@ RSpec.describe "integration" do
 
     it "returns an entry closest to the time available" do
       diary = Diary.new
-      diary_entry_1 = DiaryEntry.new("my title 1", "my contents my ")
+      diary_entry_1 = DiaryEntry.new("my title 1", "my contents")
       diary_entry_2 = DiaryEntry.new("my title 2", "my contents")
       diary_entry_3 = DiaryEntry.new("my title 2", "my contents my contents")
       diary.add(diary_entry_1)
