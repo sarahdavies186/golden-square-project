@@ -63,5 +63,29 @@ RSpec.describe "integration" do
       result = diary.find_best_entry_for_reading_time(4, 1)
       expect(result).to eq diary_entry_1
     end
+
+    it "returns an entry closest to the time available" do
+      diary = Diary.new
+      diary_entry_1 = DiaryEntry.new("my title 1", "my contents my ")
+      diary_entry_2 = DiaryEntry.new("my title 2", "my contents")
+      diary_entry_3 = DiaryEntry.new("my title 2", "my contents my contents")
+      diary.add(diary_entry_1)
+      diary.add(diary_entry_2)
+      diary.add(diary_entry_3)
+      result = diary.find_best_entry_for_reading_time(3, 1)
+      expect(result).to eq diary_entry_1
+    end
+
+    it "returns an entry closest to the time available" do
+      diary = Diary.new
+      diary_entry_1 = DiaryEntry.new("my title 1", "my contents my ")
+      diary_entry_2 = DiaryEntry.new("my title 2", "my contents")
+      diary_entry_3 = DiaryEntry.new("my title 2", "my contents my contents")
+      diary.add(diary_entry_1)
+      diary.add(diary_entry_2)
+      diary.add(diary_entry_3)
+      result = diary.find_best_entry_for_reading_time(5, 1)
+      expect(result).to eq diary_entry_1
+    end
   end
 end

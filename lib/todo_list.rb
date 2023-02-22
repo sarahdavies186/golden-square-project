@@ -1,3 +1,5 @@
+#completed with Konrad Dunski
+
 class TodoList
   def initialize
     @tasks = []

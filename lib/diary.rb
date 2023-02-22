@@ -41,6 +41,6 @@ class Diary
     end
     words_per_post.sort!
     closest = words_per_post[-1]
-    @diary_entries.each { |entry| return entry if closest == entry.count_words }
+    @diary_entries.each { |entry| return entry if closest >= entry.count_words }
   end
 end

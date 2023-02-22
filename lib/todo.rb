@@ -1,3 +1,5 @@
+#completed with Konrad Dunski
+
 class Todo
   def initialize(task, status) # task is a string
     @task = task

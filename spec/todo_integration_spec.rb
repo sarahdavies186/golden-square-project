@@ -1,3 +1,5 @@
+#completed with Konrad Dunski
+
 require "todo_list"
 require "todo"
 
