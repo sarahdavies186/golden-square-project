@@ -125,13 +125,13 @@ combinations that reflect the ways in which the system will be used._
 
 ```ruby
 
-#1 Returns an empty list if no diary entries
-#2 Returns a list of diary entries when added 
-#3 Returns an error if no diary entries to read in reading time
-#4 Return diary entry suitable for given reading time 
-#5 Searches diary entries to return mobile numbers 
-#6 Adds taks to task list
-#7 Returns empty task list if no tasks
+
+#1 Returns a list of diary entries when added 
+
+#3 Return diary entry suitable for given reading time 
+#4 Searches diary entries to return mobile numbers 
+#5 Adds taks to task list
+#6 Returns empty task list if no tasks
 
 ```
 
@@ -143,6 +143,8 @@ a more granular level of detail._
 ```ruby
 # Diary
 #1 Initlalize
+#1 Returns an empty list if no diary entries
+#2 Returns an error if no diary entries to read in reading time
 
 # DiaryEntry
 #1 Returns title and content
