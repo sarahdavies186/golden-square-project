@@ -50,3 +50,25 @@ describe "best reading time behaviour" do
     end
   end
 end
+
+describe "extract mobile numbers behaviour" do
+  context "when there is a phone number in a diary entry" do
+    it "returns a list with the number" do
+      my_diary = Diary.new
+      diary_entry_1 = DiaryEntry.new("My title", "Welcome to my 07757204400")
+      my_diary.add(diary_entry_1)
+      expect(my_diary.contact_list).to eq ["07757204400"]
+    end
+  end
+
+  context "when there are multiple phone numbers in multiple diary entries" do
+    it "returns a list with the numbers" do
+      my_diary = Diary.new
+      diary_entry_1 = DiaryEntry.new("My title", "Welcome to my 07757204400")
+      diary_entry_2 = DiaryEntry.new("My title", "Welcome to my 07757204488")
+      my_diary.add(diary_entry_1)
+      my_diary.add(diary_entry_2)
+      expect(my_diary.contact_list).to eq %w[07757204400 07757204488]
+    end
+  end
+end

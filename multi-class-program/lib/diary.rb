@@ -13,14 +13,14 @@ class Diary
 
   def find_best_entry_for_reading_time(wpm, time)
     reading_time = wpm * time
-
     readable_entries =
       @diary_entries.filter { |entry| entry.count_words <= reading_time }
-
     sort_by_length = readable_entries.sort_by { |entry| entry.count_words }
-
     return sort_by_length[-1]
   end
 
-  private
+  def contact_list
+    contact_list = @diary_entries.map { |entry| entry.extract_number }
+    return contact_list.flatten
+  end
 end
