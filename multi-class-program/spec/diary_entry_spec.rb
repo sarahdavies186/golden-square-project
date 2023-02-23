@@ -27,7 +27,7 @@ RSpec.describe DiaryEntry do
     end
 
     context "when there are multiple mobile numbers in a diary entry" do
-      it "extracts them into contacts" do
+      it "extracts them " do
         diary_entry_1 =
           DiaryEntry.new("my diary", "07757204403 sarahs number is 07757204409")
         expect(diary_entry_1.extract_number).to eq %w[07757204403 07757204409]
@@ -35,7 +35,7 @@ RSpec.describe DiaryEntry do
     end
 
     context "when there is a mobile number in a diary entry that is the wrong length" do
-      it "doesn't extract it into contacts" do
+      it "doesn't extract it" do
         diary_entry_1 =
           DiaryEntry.new("my diary", "sarahs number is 0775720440")
         expect(diary_entry_1.extract_number).to eq []
